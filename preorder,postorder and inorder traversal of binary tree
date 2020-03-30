@@ -1,0 +1,59 @@
+1.	Write a c program to print  preorder, inorder, postorder traversal on binary tree. 
+
+}
+{ Program:
+#include<stdio.h>
+#include<stdlib.h>
+{
+    int data;
+    struct node* left;
+    struct node* right;
+
+   Struct node* temp = (struct node*)
+                                                    malloc(sizeof(struct node));
+   temp->data = data;
+   temp->left = null;
+   temp->right = null;
+   return(temp);
+}
+Void printpostorder(struct node* temp)
+{
+    If(node==null)
+             Return;
+     Printpostorder(node->left);
+     Printpostorder(node->right);
+     Printf( “%d”,temp->data);
+}
+Void printinorder(struct node* temp)
+{
+    If(node==null)
+           return;
+    printinorder(temp->left);
+    printf(“%d”,temp->data);
+    printinorder(temp->right);
+    
+}
+Void printpreorder(struct node*temp)
+{
+     If(node==null)
+              Return;
+     printf(“%d”,temp->data);
+     Printinorder(temp->left);
+     printinorder (temp->right);
+}
+Int main()
+{
+     Struct node* root = newnode(1);
+     root->left                   =newnode(2);
+     root->right                =newnode(3);
+     root->left->left         =newnode(4);
+     root->left->right      = newnode(5);
+     printf(“\n preorder traversal in binary tree is\n”);
+     printpreorder(root);
+     printf(“\n inorder traversal in binary tree is \n”);
+     printinorder(root);
+     printf(“\n postorder traversal in binary tree is \n”);
+     printpostorder(root);
+     return 0;
+}
+ 
