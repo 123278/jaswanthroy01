@@ -1,0 +1,60 @@
+2.	Write a c program to create(or insert)and inorder traversal on binary search tree.
+
+Program:
+#include<stdio.h>
+#include<stdlib.h>
+Struct node
+{
+    Int key;
+    Struct node* left* right;
+}
+Struct node* newnode(int item)
+{
+    Struct node* temp = (struct node)* 
+                                                         malloc(sizeof(struct node));
+    temp->key=item;
+    temp->left=temp->right=null;
+    return temp;
+}
+Void inorder(struct node* root)
+{
+    If (root !=null)
+    {
+             Inorder(root->left);
+             Print(“%d \n”, root->key);
+             Inorder(root->right);
+     }
+}
+Struct node* insert(struct node* node, int key)
+{
+      If(node==null)
+             Return newnode(key);
+      If(key<node->key)
+              Node->left= insert(node->left, key);
+      Else if(key>node->key)
+               Node->right= insert(node->right, key);
+       Return node;
+}
+Int main()
+{
+      Int n, i,data, s;
+      Printf(“enter the number of elements of tree:”);
+      Scanf(“%d”, &n);
+      For(i=0; i<n; i++)
+      {
+          Printf(“Enter the elements of tree”);
+          Scanf(“%d”,&key);
+          Root = insert(root, key);
+      }
+      Printf(“preorder:”);
+      Inorder(root);
+      Printf(“\n”);
+}
+
+Output:
+Enter the number of elements of tree:3
+      Enter the element of tree2
+      Enter the element of tree1
+      Enter the element of tree10
+      Preorder:1  2  10
+
