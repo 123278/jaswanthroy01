@@ -1,0 +1,39 @@
+3.	Write a c program for linear search algorithm
+
+Program:
+#include<stdio.h>
+#include<stdlib.h>
+Int main()
+{
+     Int arr[100], search, i, n,count;
+     Printf(“ enter the number of elements in the array\n”);
+     Scanf(“%d”,&n);
+     Printf(“enter %d integer\n”, n);
+      For(i=0; i<n; i++)
+     {
+          Printf(“enter %d element of array:”,i+1)
+          Scanf(“%d”,arr[i]);
+      }
+      Printf(“enter the elements to search:”);
+      Scanf(“%d”, &search);
+      For(i=0;i<n;i++)
+      {
+          If(arr[i]==search
+          {
+              Printf(“the element is found”);
+              Count=1;
+           }
+       }
+       If(count==0)
+                   Printf(“the element is not found”);
+}      
+
+  Output:
+  Enter the number of elements in the array
+       Enter 1st element of array:2
+        Enter 2nd element of array:4
+       Enter the 3rd element of array:6
+      Enter the 4th element of array:8
+       Ente the 5th element of array:10
+ Enter the element to search:10
+The element is found
